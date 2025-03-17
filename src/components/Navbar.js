@@ -28,7 +28,7 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
         <div className="logo">
-          <a href="#home">YourName</a>
+          <a href="#home">Oussama Benoujja</a>
         </div>
 
         <div className="nav-controls">

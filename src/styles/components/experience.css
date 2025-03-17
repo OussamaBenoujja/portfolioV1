@@ -1,0 +1,146 @@
+.experience-section {
+    padding: 4rem 0;
+    background-color: var(--bg-color);
+  }
+  
+  .timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+    background-color: var(--primary-color);
+  }
+  
+  .experience-card {
+    position: relative;
+    width: calc(50% - 40px);
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px var(--shadow-color);
+  }
+  
+  .experience-card:nth-child(odd) {
+    margin-left: auto;
+  }
+  
+  .experience-card:nth-child(even) {
+    margin-right: auto;
+  }
+  
+  .experience-card::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    width: 20px;
+    height: 20px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+  }
+  
+  .experience-card:nth-child(odd)::before {
+    left: -50px;
+  }
+  
+  .experience-card:nth-child(even)::before {
+    right: -50px;
+  }
+  
+  .experience-header {
+    margin-bottom: 1rem;
+  }
+  
+  .experience-header h3 {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+  }
+  
+  .experience-subheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .experience-subheader h4 {
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  
+  .duration {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    font-weight: 600;
+  }
+  
+  .experience-content p {
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+  }
+  
+  .challenges,
+  .technologies {
+    margin-bottom: 1.5rem;
+  }
+  
+  .challenges h4,
+  .technologies h4 {
+    margin-bottom: 0.75rem;
+    color: var(--primary-color);
+  }
+  
+  .tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+  }
+  
+  .tech-item {
+    padding: 0.3rem 0.75rem;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 20px;
+    font-size: 0.9rem;
+  }
+  
+  .view-project-btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+  }
+  
+  .view-project-btn:hover {
+    background-color: var(--secondary-color);
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+    .timeline::before {
+      left: 20px;
+    }
+    
+    .experience-card {
+      width: calc(100% - 60px);
+      margin-left: 60px !important;
+    }
+    
+    .experience-card::before {
+      left: -30px !important;
+    }
+  }

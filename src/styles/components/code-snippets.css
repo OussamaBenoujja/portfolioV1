@@ -1,0 +1,85 @@
+.code-section {
+    padding: 4rem 0;
+    background-color: var(--bg-color);
+  }
+  
+  .github-profile {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .github-link {
+    font-weight: 600;
+  }
+  
+  .snippets-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .snippets-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  
+  .snippet-nav-item {
+    padding: 0.5rem 1rem;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .snippet-nav-item:hover {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .snippet-nav-item.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+  }
+  
+  .snippet-display {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px var(--shadow-color);
+  }
+  
+  .code-snippet {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .snippet-header {
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .snippet-header h3 {
+    font-size: 1.3rem;
+  }
+  
+  .snippet-content {
+    overflow: auto;
+  }
+  
+  .code-block {
+    margin: 0 !important;
+    border-radius: 0 !important;
+  }
+  
+  .snippet-description {
+    padding: 1rem;
+    background-color: var(--card-bg);
+    border-top: 1px solid var(--border-color);
+  }
+  

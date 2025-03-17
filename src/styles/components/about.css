@@ -1,0 +1,100 @@
+.about-section {
+    padding: 4rem 0;
+    background-color: var(--bg-color);
+  }
+  
+  .about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+  }
+  
+  .about-image {
+    flex: 1;
+    max-width: 400px;
+  }
+  
+  .image-placeholder {
+    width: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 5px 15px var(--shadow-color);
+  }
+  
+  .image-placeholder img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+  }
+  
+  .image-placeholder:hover img {
+    transform: scale(1.05);
+  }
+  
+  .about-text {
+    flex: 1.5;
+  }
+  
+  .about-text h3 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+  }
+  
+  .about-text h4 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+  }
+  
+  .about-bio {
+    margin-bottom: 2rem;
+    line-height: 1.8;
+  }
+  
+  .about-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .detail-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .detail-icon {
+    font-size: 1.5rem;
+  }
+  
+  .about-interests h4 {
+    margin-bottom: 1rem;
+  }
+  
+  .about-interests ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+  }
+  
+  .about-interests ul li {
+    background-color: var(--card-bg);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px var(--shadow-color);
+  }
+  
+  @media (max-width: 992px) {
+    .about-content {
+      flex-direction: column;
+    }
+    
+    .about-image {
+      max-width: 300px;
+    }
+  }
