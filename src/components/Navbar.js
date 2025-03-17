@@ -54,7 +54,6 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
           <li><a href="#experience" onClick={() => setMobileMenuOpen(false)}>Experience</a></li>
           <li><a href="#projects" onClick={() => setMobileMenuOpen(false)}>Projects</a></li>
           <li><a href="#skills" onClick={() => setMobileMenuOpen(false)}>Skills</a></li>
-          <li><a href="#code" onClick={() => setMobileMenuOpen(false)}>Code</a></li>
           <li><a href="#blog" onClick={() => setMobileMenuOpen(false)}>Blog</a></li>
           <li><a href="#contact" onClick={() => setMobileMenuOpen(false)}>Contact</a></li>
         </ul>

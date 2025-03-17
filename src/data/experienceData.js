@@ -1,24 +1,32 @@
   // data/experienceData.js
   const experienceData = [
     {
-      title: "Full-Stack Developer",
-      company: "YouCode",
-      duration: "2022 - Present",
-      description: "Developed various web applications as part of the YouCode program, focusing on PHP/Laravel for backend and JavaScript for frontend development.",
-      technologies: ["PHP", "Laravel", "JavaScript", "MySQL", "HTML", "CSS", "Tailwind CSS"],
+      title: "Full Stack Web & Mobile Development",
+      company: "UM6P - YOUCODE | Safi, Morocco",
+      duration: "2024 - Present",
+      description: "Comprehensive training in modern web and mobile development technologies with focus on industry best practices and agile methodologies.",
+      technologies: ["PHP", "Laravel", "JavaScript", "Vue.js", "React.js", "RESTful API", "Git"],
       projectLink: "https://github.com/yourusername/youcode-project",
-      challenges: "One of the main challenges was implementing a real-time notification system for users. I solved this by integrating Laravel Echo and Pusher for real-time updates."
+      challenges: "Building RESTful API systems using Laravel and PHP with focus on clean architecture."
     },
     {
-      title: "Housing Electrical Technician",
-      company: "Previous Company",
-      duration: "2020 - 2022",
-      description: "Installed and maintained electrical systems in residential and commercial buildings, developed problem-solving skills that I later applied to programming.",
-      technologies: [],
+      title: "Industrial Electricity",
+      company: "OFPPT ISTA | Berkane, Morocco",
+      duration: "Sep 2022 - Jul 2024",
+      description: "Technical training in industrial electrical systems with hands-on experience in electrical installations and system maintenance.",
+      technologies: ["Electrical Systems", "Technical Drawing", "Safety Protocols"],
       projectLink: "",
-      challenges: "Working with complex electrical systems required detailed planning and troubleshooting, which developed my analytical thinking and attention to detail."
+      challenges: "Learning complex electrical system design and implementation while maintaining safety standards."
     },
-    // Add more experience items as needed
+    {
+      title: "Installation Electricity",
+      company: "OFPPT CQP | Berkane, Morocco",
+      duration: "Oct 2020 - Nov 2021",
+      description: "Foundation in electrical installation and systems, focusing on residential and commercial electrical work.",
+      technologies: ["Electrical Wiring", "Circuit Design", "Electrical Safety"],
+      projectLink: "",
+      challenges: "Developing technical skills in basic electrical installation while learning industry standards."
+    }
   ];
   
   export default experienceData;

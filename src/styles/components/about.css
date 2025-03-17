@@ -96,5 +96,6 @@
     
     .about-image {
       max-width: 300px;
+      height: 300px;
     }
   }

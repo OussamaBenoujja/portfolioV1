@@ -26,8 +26,6 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    // Here you would typically send the form data to a backend API
-    // For now, let's simulate a successful form submission
     
     setFormStatus({
       submitted: true,
@@ -55,7 +53,7 @@ const Contact = () => {
               <div className="contact-icon">📧</div>
               <div>
                 <h3>Email</h3>
-                <p><a href="mailto:your.email@example.com">your.email@example.com</a></p>
+                <p><a href="mailto:your.email@example.com">osama2code79@gmail.com</a></p>
               </div>
             </div>
             
@@ -65,11 +63,11 @@ const Contact = () => {
                 <h3>LinkedIn</h3>
                 <p>
                   <a 
-                    href="https://linkedin.com/in/yourusername" 
+                    href="https://linkedin.com/in/osamabnj" 
                     target="_blank" 
                     rel="noopener noreferrer"
                   >
-                    linkedin.com/in/yourusername
+                    linkedin.com/in/osamabnj
                   </a>
                 </p>
               </div>
@@ -79,7 +77,7 @@ const Contact = () => {
               <div className="contact-icon">📍</div>
               <div>
                 <h3>Location</h3>
-                <p>Your City, Country</p>
+                <p>Berkane, Morocco</p>
               </div>
             </div>
           </div>

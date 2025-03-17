@@ -11,8 +11,8 @@ const About = () => {
         <div className="about-content">
           <div className="about-image">
             <div className="image-placeholder">
-              {/* Replace with your actual image */}
-              <img src="/assets/images/profile-photo.jpg" alt="Your Name" />
+             
+              <img src="/assets/images/profile-photo.jpg" alt="Oussama Benoujja" />
             </div>
           </div>
           

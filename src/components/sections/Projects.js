@@ -13,6 +13,7 @@ const Projects = () => {
     'php',
     'laravel',
     'javascript',
+    'api',
     'unity',
     'blender'
   ];
