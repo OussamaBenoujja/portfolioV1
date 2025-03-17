@@ -15,7 +15,7 @@
     padding: 0.5rem 1.25rem;
     background-color: var(--card-bg);
     border: 1px solid var(--border-color);
-    border-radius: 20px;
+    border-radius: 4px;
     font-size: 0.9rem;
     font-weight: 500;
     cursor: pointer;
@@ -46,6 +46,7 @@
     overflow: hidden;
     box-shadow: 0 4px 10px var(--shadow-color);
     transition: transform 0.3s, box-shadow 0.3s;
+    border-top: 3px solid var(--primary-color);
   }
   
   .project-card:hover {
@@ -106,13 +107,13 @@
   }
   
   .github-link {
-    background-color: #333;
+    background-color: var(--secondary-color);
     color: white;
   }
   
   .project-link:hover {
-    opacity: 0.9;
     transform: scale(1.05);
+    background-color: var(--hover-color);
   }
   
   .project-details {
@@ -141,7 +142,7 @@
     padding: 0.25rem 0.75rem;
     background-color: var(--primary-color);
     color: white;
-    border-radius: 20px;
+    border-radius: 4px;
     font-size: 0.85rem;
   }
   
@@ -155,7 +156,7 @@
     padding: 0.25rem 0.75rem;
     background-color: var(--secondary-color);
     color: white;
-    border-radius: 20px;
+    border-radius: 4px;
     font-size: 0.85rem;
   }
   

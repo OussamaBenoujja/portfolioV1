@@ -3,30 +3,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap');
 
 :root {
-  /* Light theme colors */
-  --primary-color: #3a86ff;
-  --secondary-color: #fb5607;
+  /* Light theme colors - Dante-inspired theme */
+  --primary-color: #D40000; /* Crimson Red */
+  --secondary-color: #333333; /* Dark Charcoal Gray */
+  --accent-color: #B4B8B1; /* Silver/Steel Gray */
   --text-color: #333333;
   --bg-color: #ffffff;
   --card-bg: #f8f8f8;
-  --border-color: #dddddd;
+  --border-color: #B4B8B1;
   --header-bg: rgba(255, 255, 255, 0.95);
   --shadow-color: rgba(0, 0, 0, 0.1);
   --code-bg: #282c34;
   --code-text: #abb2bf;
+  --hover-color: #FF3333; /* Lighter red for hover states */
 }
 
 .dark-mode {
-  --primary-color: #4a9fff;
-  --secondary-color: #ff6b1a;
+  --primary-color: #FF2222; /* Brighter Crimson in dark mode */
+  --secondary-color: #B4B8B1; /* Silver/Steel Gray becomes secondary in dark mode */
+  --accent-color: #808080; /* Darker accent for dark mode */
   --text-color: #f0f0f0;
   --bg-color: #121212;
   --card-bg: #1e1e1e;
-  --border-color: #333333;
+  --border-color: #444444;
   --header-bg: rgba(18, 18, 18, 0.95);
   --shadow-color: rgba(0, 0, 0, 0.4);
   --code-bg: #1e1e1e;
   --code-text: #d4d4d4;
+  --hover-color: #FF4444; /* Lighter red for hover states in dark mode */
 }
 
 * {
@@ -54,7 +58,7 @@ a {
 }
 
 a:hover {
-  color: var(--secondary-color);
+  color: var(--hover-color);
 }
 
 button {
@@ -103,6 +107,27 @@ main {
   background-color: var(--secondary-color);
 }
 
+/* Button styling */
+.btn, .submit-btn, .view-project-btn, .read-more, .project-link {
+  background-color: var(--primary-color);
+  border: none;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.btn:hover, .submit-btn:hover, .view-project-btn:hover, .read-more:hover, .project-link:hover {
+  background-color: var(--hover-color);
+}
+
+/* Technology tags */
+.tech-tag {
+  background-color: var(--primary-color);
+}
+
+.category-tag {
+  background-color: var(--secondary-color);
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
   .section-container {
@@ -124,7 +149,7 @@ main {
   }
 }
 
-/* Import Component Styles */
+/* Component imports remain the same */
 @import './components/header.css';
 @import './components/navbar.css';
 @import './components/about.css';
@@ -135,204 +160,3 @@ main {
 @import './components/blog.css';
 @import './components/contact.css';
 @import './components/footer.css';
-
-/* styles/components/header.css */
-.header {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-  color: white;
-  text-align: center;
-  padding: 0 1rem;
-}
-
-.header-content h1 {
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
-  animation: fadeInDown 1s ease-out;
-}
-
-.header-content h2 {
-  font-size: 1.75rem;
-  font-weight: 400;
-  animation: fadeInUp 1s ease-out;
-}
-
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@media (max-width: 768px) {
-  .header-content h1 {
-    font-size: 2.5rem;
-  }
-  
-  .header-content h2 {
-    font-size: 1.5rem;
-  }
-}
-
-/* styles/components/navbar.css */
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  background-color: var(--header-bg);
-  box-shadow: 0 2px 10px var(--shadow-color);
-  transition: all 0.3s ease;
-}
-
-.navbar-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem 1.5rem;
-}
-
-.logo a {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--primary-color);
-}
-
-.nav-controls {
-  display: flex;
-  align-items: center;
-}
-
-.dark-mode-toggle {
-  background: none;
-  border: none;
-  font-size: 1.25rem;
-  margin-right: 1rem;
-  color: var(--text-color);
-}
-
-.mobile-menu-button {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  color: var(--text-color);
-}
-
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 1.5rem;
-}
-
-.nav-links li a {
-  color: var(--text-color);
-  font-weight: 500;
-  position: relative;
-}
-
-.nav-links li a::after {
-  content: '';
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: var(--primary-color);
-  transition: width 0.3s;
-}
-
-.nav-links li a:hover::after {
-  width: 100%;
-}
-
-@media (max-width: 768px) {
-  .mobile-menu-button {
-    display: block;
-  }
-  
-  .nav-links {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    flex-direction: column;
-    background-color: var(--header-bg);
-    padding: 1rem;
-    gap: 1rem;
-    box-shadow: 0 5px 10px var(--shadow-color);
-    transform: translateY(-100%);
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.3s ease;
-  }
-  
-  .nav-links.active {
-    transform: translateY(0);
-    opacity: 1;
-    pointer-events: auto;
-  }
-}
-
-/* Add styles for other components similarly */
-/* For brevity, I'm not including all component styles but you would add them similarly */
-
-/* Here's the basic structure for the remaining CSS files: */
-
-/* styles/components/footer.css */
-.footer {
-  background-color: var(--card-bg);
-  padding: 2rem 0;
-  border-top: 1px solid var(--border-color);
-}
-
-.footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.footer-links a {
-  margin-left: 1.5rem;
-  color: var(--text-color);
-}
-
-.footer-links a:hover {
-  color: var(--primary-color);
-}
-
-@media (max-width: 768px) {
-  .footer-content {
-    flex-direction: column;
-    text-align: center;
-    gap: 1rem;
-  }
-  
-  .footer-links a {
-    margin: 0 0.75rem;
-  }
-}

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/components/navbar.css';
+import ThreeLogo from './ThreeLogo'; 
 
 const Navbar = ({ toggleDarkMode, darkMode }) => {
   const [scrolled, setScrolled] = useState(false);
@@ -28,7 +29,13 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
         <div className="logo">
-          <a href="#home">Oussama Benoujja</a>
+          {/* Replace text logo with ThreeLogo component */}
+          <a href="#home" className="logo-link">
+            <div className="three-logo-wrapper">
+              <ThreeLogo darkMode={darkMode} />
+            </div>
+            <span className="logo-text">Oussama Benoujja</span>
+          </a>
         </div>
 
         <div className="nav-controls">
