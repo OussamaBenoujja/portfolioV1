@@ -23,16 +23,29 @@
     pointer-events: none;
   }
   
+  /* Add styling for the eye container */
+  .eye-container {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    right: 15%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    pointer-events: none; /* Ensure it doesn't interfere with other elements */
+  }
+  
   .header-content {
     position: relative;
-    z-index: 1;
+    z-index: 3; /* Higher than the eye */
+    /* Add a subtle text shadow to make text readable over the eye */
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.6), 0 2px 4px rgba(0, 0, 0, 0.4);
   }
   
   .header-content h1 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
     animation: fadeInDown 1s ease-out;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   }
   
   .header-content h2 {
@@ -40,7 +53,6 @@
     font-weight: 400;
     animation: fadeInUp 1s ease-out;
     color: var(--accent-color);
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   }
   
   @keyframes fadeInDown {
@@ -65,6 +77,15 @@
     }
   }
   
+  /* Make the eye responsive */
+  @media (max-width: 1200px) {
+    .eye-container {
+      width: 250px;
+      height: 250px;
+      right: 10%;
+    }
+  }
+  
   @media (max-width: 768px) {
     .header-content h1 {
       font-size: 2.5rem;
@@ -72,5 +93,19 @@
     
     .header-content h2 {
       font-size: 1.5rem;
+    }
+    
+    .eye-container {
+      width: 200px;
+      height: 200px;
+      opacity: 0.7; /* Make it slightly transparent on small screens */
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .eye-container {
+      width: 150px;
+      height: 150px;
+      right: 5%;
     }
   }

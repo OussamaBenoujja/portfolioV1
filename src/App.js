@@ -7,7 +7,6 @@ import About from './components/sections/About';
 import Experience from './components/sections/Experience';
 import Projects from './components/sections/Projects';
 import Skills from './components/sections/Skills';
-import CodeSnippets from './components/sections/CodeSnippets';
 import Contact from './components/sections/Contact';
 import Blog from './components/sections/Blog';
 import Footer from './components/Footer';
@@ -21,7 +20,7 @@ function App() {
 
   return (
     <div className={`app ${darkMode ? 'dark-mode' : 'light-mode'}`}>
-      <Header />
+      <Header darkMode={darkMode} />
       <Navbar toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
       <main>
         <About />
@@ -37,4 +36,3 @@ function App() {
 }
 
 export default App;
-
