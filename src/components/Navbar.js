@@ -29,12 +29,11 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
         <div className="logo">
-          {/* Replace text logo with ThreeLogo component */}
+         
           <a href="#home" className="logo-link">
             <div className="three-logo-wrapper">
               <ThreeLogo darkMode={darkMode} />
             </div>
-            <span className="logo-text">Oussama Benoujja</span>
           </a>
         </div>
 

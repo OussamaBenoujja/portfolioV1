@@ -30,7 +30,7 @@
   }
   
   .three-logo-wrapper {
-    width: 50px;
+    width: 400px;
     height: 50px;
     margin-right: 12px;
     display: flex;
@@ -112,7 +112,7 @@
     }
     
     .three-logo-wrapper {
-      width: 40px;
+      width: 100px;
       height: 40px;
       margin-right: 8px;
     }
