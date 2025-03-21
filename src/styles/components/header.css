@@ -32,7 +32,10 @@
     top: 50%;
     transform: translateY(-50%);
     z-index: 2;
-    pointer-events: none; /* Ensure it doesn't interfere with other elements */
+    /* Make it capture pointer events for debugging */
+    pointer-events: auto;
+    /* Add a debug background */
+    background-color: rgba(255,0,0,0.1);
   }
   
   .header-content {

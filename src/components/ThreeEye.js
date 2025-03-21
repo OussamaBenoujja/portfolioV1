@@ -68,20 +68,41 @@ const ThreeEye = ({ darkMode }) => {
       spotLight.penumbra = 0.1;
       sceneRef.current.add(spotLight);
       
+      // Add a debug sphere to confirm rendering is working
+      const debugSphere = new THREE.Mesh(
+        new THREE.SphereGeometry(1, 32, 32),
+        new THREE.MeshPhongMaterial({ 
+          color: 0xFF0000,
+          specular: 0xFFFFFF,
+          shininess: 100
+        })
+      );
+      debugSphere.position.set(0, 0, 0);
+      sceneRef.current.add(debugSphere);
+      
+      // Log for debugging
+      console.log("Debug sphere added to scene");
+      
       // Load the OBJ model
       const loader = new OBJLoader();
       loader.load(
         '/assets/models/eye.obj', // Path to your eye.obj file
         (obj) => {
+          console.log("Eye model loaded successfully", obj);
+          
           // Get bounding box to center model
           const bbox = new THREE.Box3().setFromObject(obj);
           const center = bbox.getCenter(new THREE.Vector3());
           
+          // Log original size
+          const size = bbox.getSize(new THREE.Vector3());
+          console.log("Original eye model size:", size);
+          
           // Center the model
           obj.position.sub(center);
           
-          // Apply scale
-          obj.scale.set(0.5, 0.5, 0.5); // Adjust scale as needed
+          // Apply scale - try a much larger scale
+          obj.scale.set(5, 5, 5); // Much larger scale than before
           
           // Apply material based on dark mode
           const material = new THREE.MeshPhongMaterial({
@@ -200,8 +221,22 @@ const ThreeEye = ({ darkMode }) => {
         top: 0,
         left: 0,
         zIndex: 1,
+        border: '2px solid yellow' // Add temporary border for debug
       }}
-    />
+    >
+      {/* Debug element */}
+      <div style={{
+        position: 'absolute',
+        bottom: 0,
+        right: 0,
+        background: 'rgba(0,0,0,0.5)',
+        color: 'white',
+        padding: '5px',
+        fontSize: '10px'
+      }}>
+        Eye Container
+      </div>
+    </div>
   );
 };
 

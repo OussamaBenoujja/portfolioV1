@@ -1,10 +1,10 @@
   // data/projectsData.js
   const projectsData = [
     {
-      title: "E-Commerce Dashboard",
-      description: "A comprehensive admin dashboard for an e-commerce platform with inventory management, sales analytics, and user management features.",
+      title: "MedHelp a medical website",
+      description: "A medical website that helps people to find the medical doctors and book an appointment.",
       image: "/assets/images/projects/ecommerce-dashboard.jpg",
-      technologies: ["Laravel", "PHP", "MySQL", "JavaScript", "Bootstrap"],
+      technologies: ["Docker", "PHP", "PostgresSQL", "JavaScript", "Tailwind CSS"],
       liveLink: "https://example.com/ecommerce-dashboard",
       githubLink: "https://github.com/yourusername/ecommerce-dashboard",
       categories: ["web", "php", "laravel"]
@@ -45,7 +45,7 @@
       githubLink: "https://github.com/yourusername/3d-models",
       categories: ["blender", "unity"]
     },
-    // Add more projects as needed
+    
   ];
   
   export default projectsData;
